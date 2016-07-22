@@ -28,6 +28,7 @@
   "dependencies": {
     "apollo-server": "^0.1.5",
     "casual": "^1.5.3",
+    "cors": "^2.7.1",
     "express": "4.13.4",
     "graphql-tools": "^0.4.2",
     "request-promise": "^4.0.2"
