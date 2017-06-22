@@ -21,11 +21,9 @@ const PostModel = db.define('post', {
 // add this somewhere in the middle
 const FortuneCookie = {
   getOne() {
-    return rp('http://fortunecookieapi.com/v1/cookie')
+    return rp('https://jsonplaceholder.typicode.com/posts/1')
       .then((res) => JSON.parse(res))
-      .then((res) => {
-        return res[0].fortune.message;
-      });
+      .then((res) => res.title);
   },
 };
 

@@ -7,7 +7,7 @@ See also [Tutorial: How to build a GraphQL server](https://medium.com/apollo-sta
 ## Getting started
 
 ```sh
-git clone https://github.com/apollostack/apollo-starter-kit
+git clone https://github.com/waynelai614/apollo-starter-kit.git
 cd apollo-starter-kit
 npm install
 npm run start
@@ -19,7 +19,17 @@ When you paste this on the left side of the page:
 
 ```
 {
-  testString
+  author(firstName: "Edmond") {
+    id
+    firstName
+    lastName
+    posts {
+      id
+      title
+      text
+    }
+  }
+  getFortuneCookie
 }
 ```
 
@@ -28,7 +38,19 @@ and hit the play button (cmd-return), then you should get this on the right side
 ```json
 {
   "data": {
-    "testString": "It works!"
+    "author": {
+      "id": 2,
+      "firstName": "Edmond",
+      "lastName": "Jones",
+      "posts": [
+        {
+          "id": 2,
+          "title": "A post by Edmond",
+          "text": "Harum ullam pariatur quos est quod. Ea quisquam esse quia et commodi autem. Ut exercitationem maiores et voluptas."
+        }
+      ]
+    },
+    "getFortuneCookie": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
   }
 }
 ```  
